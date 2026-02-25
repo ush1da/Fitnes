@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Запишіться на безкоштовне тренування у FitLife. Залиште свої контакти, і ми зв'яжемося з вами."
+    />
+    <title>Запис — FitLife</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FitLife Fitness Club</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html">Розклад та заняття</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Залиште заявку</h2>
+      <form
+        class="contact-form"
+        onsubmit="alert('Дякуємо за заявку! Ми зателефонуємо вам протягом 15 хвилин.'); return false;"
+      >
+        <fieldset>
+          <legend>Ваші дані для зв'язку</legend>
+
+          <div class="form-group">
+            <label for="name">Ім'я:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Як вас звати?"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Електронна пошта:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="example@mail.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="^\+380\d{9}$"
+              placeholder="+380XXXXXXXXX"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Ваше повідомлення:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Ваші побажання..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Надіслати запит</button>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer>
+      <p>© 2026 Лабораторна робота №1. Рюмшин Кирило П-31.</p>
+    </footer>
+  </body>
+</html>
