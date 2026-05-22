@@ -90,3 +90,39 @@ if (trainingSelect) {
     trainingSelect.append(option);
   });
 }
+
+/* ===== FORM VALIDATION ===== */
+
+const form = document.querySelector("#contact-form");
+
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const messageField = document.querySelector("#message");
+
+    const message = messageField.value.toLowerCase();
+
+    if (message.includes("спам") || message.includes("реклама")) {
+      messageField.setCustomValidity(
+        "Заборонено використовувати слова: спам або реклама"
+      );
+    } else {
+      messageField.setCustomValidity("");
+    }
+
+    if (form.checkValidity()) {
+      const formData = new FormData(form);
+
+      const formObject = Object.fromEntries(formData.entries());
+
+      console.log("Дані форми:", formObject);
+
+      alert("Повідомлення успішно відправлено!");
+
+      form.reset();
+    } else {
+      form.reportValidity();
+    }
+  });
+}

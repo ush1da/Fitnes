@@ -37,7 +37,7 @@
         <fieldset>
           <legend>Ваші дані для зв'язку</legend>
 
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 validation-group">
             <label for="name">Ім'я:</label>
 
             <input
@@ -50,7 +50,7 @@
             />
           </div>
 
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 validation-group">
             <label for="email">Електронна пошта:</label>
 
             <input
@@ -63,7 +63,7 @@
             />
           </div>
 
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 validation-group">
             <label for="phone">Телефон:</label>
 
             <input
@@ -76,16 +76,16 @@
               required
             />
           </div>
-          <div class="form-group mb-3">
+          <div class="form-group mb-3 validation-group">
             <label for="training-type">Оберіть тренування:</label>
 
-            <select id="training-type" class="form-control">
-              <option>Оберіть тренування</option>
+            <select id="training-type" class="form-control" required>
+              <option value="">Оберіть тренування</option>
             </select>
           </div>
 
-          <div class="form-group mb-3">
-            <label for="message">Ваше повідомлення:</label>
+          <div class="form-group mb-3 validation-group">
+            <label for="message"> Ваше повідомлення: </label>
 
             <textarea
               id="message"
@@ -93,6 +93,8 @@
               rows="4"
               class="form-control"
               placeholder="Ваші побажання..."
+              required
+              minlength="10"
             ></textarea>
           </div>
 

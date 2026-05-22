@@ -245,3 +245,32 @@ option {
   color: #111 !important;
   border: none !important;
 }
+/* фвфівфівфів */
+.form-control:valid {
+  border: 2px solid #03dac6 !important;
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+  border: 2px solid #ff4d4d !important;
+}
+
+.validation-group {
+  position: relative;
+}
+
+.validation-group::after {
+  position: absolute;
+  right: 15px;
+  top: 45px;
+  font-size: 1.2rem;
+}
+
+.validation-group:has(.form-control:valid)::after {
+  content: "✔";
+  color: #03dac6;
+}
+
+.validation-group:has(.form-control:invalid:not(:placeholder-shown))::after {
+  content: "✖";
+  color: #ff4d4d;
+}
