@@ -6,28 +6,23 @@
 
     <meta
       name="description"
-      content="FitLife — сучасний фітнес-клуб у Харкові. Професійне обладнання, розклад занять, вигідні абонементи та кваліфіковані тренери."
+      content="FitLife — сучасний фітнес-клуб у Харкові."
     />
-    <meta property="og:title" content="FitLife — Твій шлях до сили" />
-    <meta
-      property="og:description"
-      content="Сучасний фітнес-клуб із найкращим обладнанням."
-    />
-    <meta property="og:type" content="website" />
 
     <title>FitLife — Твій шлях до сили</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Bootstrap -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style3.css" />
   </head>
+
   <body>
     <header>
-      <h1>FitLife Fitness Club</h1>
+      <h1 class="display-4">FitLife Fitness Club</h1>
     </header>
 
     <nav>
@@ -41,83 +36,106 @@
     <main>
       <section class="hero">
         <div class="hero-content">
-          <h2>Твій шлях до ідеальної форми починається тут</h2>
+          <h2 class="text-center mb-4">
+            Твій шлях до ідеальної форми починається тут
+          </h2>
+
           <p>
             Ми пропонуємо індивідуальний підхід та сучасне обладнання для ваших
             тренувань.
           </p>
-          <a href="contact.html" class="cta-button"
-            >Отримати безкоштовну консультацію</a
-          >
+
+          <a href="contact.html" class="cta-button">
+            Отримати безкоштовну консультацію
+          </a>
         </div>
       </section>
 
       <section class="pricing">
-        <h2>Наші абонементи</h2>
-        <div class="price-cards">
-          <article class="card">
+        <h2 class="text-center mb-4">Наші абонементи</h2>
+
+        <div class="row g-4">
+          <article class="card col-md-4">
             <h3>Базовий</h3>
+
             <p class="price">800 грн/міс</p>
+
             <ul>
               <li>Тренажерний зал</li>
               <li>Душові кабіни</li>
             </ul>
+
             <a
               href="contact.html"
-              class="buy-button"
+              class="buy-button btn btn-primary"
               aria-label="Купити базовий абонемент"
-              >Купити абонемент</a
             >
+              Купити абонемент
+            </a>
           </article>
 
-          <article class="card">
+          <article class="card col-md-4">
             <h3>Стандарт</h3>
+
             <p class="price">1200 грн/міс</p>
+
             <ul>
               <li>Тренажерний зал</li>
               <li>Групові заняття</li>
             </ul>
+
             <a
               href="contact.html"
-              class="buy-button"
+              class="buy-button btn btn-primary"
               aria-label="Купити стандартний абонемент"
-              >Купити абонемент</a
             >
+              Купити абонемент
+            </a>
           </article>
 
-          <article class="card">
+          <article class="card col-md-4">
             <h3>Преміум</h3>
+
             <p class="price">1800 грн/міс</p>
+
             <ul>
               <li>Все включено</li>
               <li>Персональний тренер</li>
             </ul>
+
             <a
               href="contact.html"
-              class="buy-button"
+              class="buy-button btn btn-primary"
               aria-label="Купити преміум абонемент"
-              >Купити абонемент</a
             >
+              Купити абонемент
+            </a>
           </article>
         </div>
       </section>
 
       <section class="location">
-        <h2>Де ми знаходимось</h2>
-        <div class="location-container">
-          <div class="address-info">
+        <h2 class="text-center mb-4">Де ми знаходимось</h2>
+
+        <div class="location-container row">
+          <div class="address-info col-md-6">
             <p>📍 <strong>Адреса:</strong> м. Харків, вул. Спортивна, 10</p>
+
             <p>
               📞 <strong>Телефон:</strong>
+
               <a
                 href="tel:+380991234567"
                 style="color: inherit; text-decoration: none"
-                >+380 99 123 45 67</a
               >
+                +380 99 123 45 67
+              </a>
             </p>
+
             <p>⏰ <strong>Час роботи:</strong> 07:00 - 23:00</p>
           </div>
-          <div class="map">
+
+          <div class="map col-md-6">
             <iframe
               src="https://www.google.com/maps/embed?pb=1m14!1m12!1m3!1d10258.232738513049!2d36.2327385!3d49.9935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000000000"
               height="300"
@@ -125,15 +143,16 @@
               allowfullscreen=""
               loading="lazy"
               title="Карта розташування фітнес-клубу FitLife"
-            >
-            </iframe>
+            ></iframe>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 Лабораторна робота №1. Рівень «Базовий». Рюмшин Кирило П-31.</p>
+      <p>© 2026 Практична робота №2. Рюмшин Кирило П-31.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
