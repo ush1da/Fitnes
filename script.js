@@ -1,108 +1,106 @@
+// Дані тренувань
 const fitnessSchedule = [
   {
-    id: "s1",
-    "class type": "Yoga",
-    info: {
-      trainer: "Anna",
-      duration: 60,
-    },
-    capacity: 15,
-    "is full": true,
+    id: 1,
+    name: "Yoga",
+    price: 300,
+    description: "Спокійне тренування для гнучкості",
+    trainer: "Anna",
   },
 
   {
-    id: "s2",
-    "class type": "CrossFit",
-    info: {
-      trainer: "Oleh",
-      duration: 45,
-    },
-    capacity: 10,
-    "is full": false,
+    id: 2,
+    name: "CrossFit",
+    price: 450,
+    description: "Інтенсивне силове тренування",
+    trainer: "Oleh",
   },
 
   {
-    id: "s3",
-    "class type": "Pilates",
-    info: {
-      trainer: "Ira",
-      duration: 60,
-    },
-    capacity: 12,
-    "is full": false,
+    id: 3,
+    name: "Pilates",
+    price: 350,
+    description: "Тренування для постави та м’язів",
+    trainer: "Ira",
   },
 
   {
-    id: "s4",
-    "class type": "Boxing",
-    info: {
-      trainer: "Max",
-      duration: 90,
-    },
-    capacity: 8,
-    "is full": true,
-  },
-
-  {
-    id: "s5",
-    "class type": "Zumba",
-    info: {
-      trainer: "Elena",
-      duration: 60,
-    },
-    capacity: 20,
-    "is full": false,
+    id: 4,
+    name: "Boxing",
+    price: 500,
+    description: "Кардіо та боксерські вправи",
+    trainer: "Max",
   },
 ];
 
-// 1. Робота з Array
+// ===============================
+// 1. Динамічне наповнення catalog
+// ===============================
 
-const smallGroups = fitnessSchedule.filter((item) => item.capacity < 15);
+const catalogContainer = document.querySelector("#catalog-container");
 
-console.log("Заняття з кількістю місць менше 15:");
-console.log(smallGroups);
+if (catalogContainer) {
+  fitnessSchedule.forEach((item) => {
+    const card = document.createElement("div");
 
-const classNames = fitnessSchedule.map((item) => item["class type"]);
+    card.classList.add("col-md-4");
 
-console.log("Назви тренувань:");
-console.log(classNames);
+    card.innerHTML = `
+      <div class="card p-4 h-100">
+        <h3>${item.name}</h3>
 
-// 2. Робота з Set
+        <p>${item.price} грн</p>
 
-const trainers = new Set(fitnessSchedule.map((item) => item.info.trainer));
+        <button
+          class="btn btn-primary details-btn"
+          data-description="${item.description}"
+        >
+          Детальніше
+        </button>
+      </div>
+    `;
 
-console.log("Унікальні тренери:");
-console.log([...trainers]);
+    catalogContainer.append(card);
+  });
 
-// 3. Робота з Map
+  // Кнопка детальніше
+  const buttons = document.querySelectorAll(".details-btn");
 
-const priceList = new Map();
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert(button.dataset.description);
+    });
+  });
+}
 
-priceList.set("Yoga", 300);
-priceList.set("CrossFit", 450);
-priceList.set("Pilates", 350);
-priceList.set("Boxing", 500);
-priceList.set("Zumba", 320);
+// ===============================
+// 2. Обробка форми
+// ===============================
 
-console.log("Ціна Yoga:");
-console.log(priceList.get("Yoga"));
+const contactForm = document.querySelector("#contact-form");
 
-console.log("Ціна Boxing:");
-console.log(priceList.get("Boxing"));
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-// Додаткові приклади
+    alert("Дякуємо за заявку! Ми зв'яжемося з вами.");
+  });
+}
 
-const availableClasses = fitnessSchedule.filter(
-  (item) => item["is full"] === false
-);
+// ===============================
+// 3. Set для select
+// ===============================
 
-console.log("Доступні тренування:");
-console.log(availableClasses);
+const trainingSelect = document.querySelector("#training-type");
 
-const durations = fitnessSchedule.map((item) => ({
-  training: item["class type"],
-  duration: item.info.duration,
-}));
+if (trainingSelect) {
+  const uniqueTrainings = new Set(fitnessSchedule.map((item) => item.name));
 
-console.log("Тривалість тренувань:");
-console.log(durations);
+  uniqueTrainings.forEach((training) => {
+    const option = document.createElement("option");
+
+    option.textContent = training;
+
+    trainingSelect.append(option);
+  });
+}

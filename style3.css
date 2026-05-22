@@ -192,3 +192,56 @@ footer {
   text-align: center !important;
   justify-content: center !important;
 }
+
+#catalog-container .card {
+  background: #111 !important;
+  border: 1px solid #03dac6 !important;
+  border-radius: 18px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#catalog-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(3, 218, 198, 0.4);
+}
+
+select,
+option {
+  background-color: #1b1b1b !important;
+  color: #03dac6 !important;
+}
+
+.btn-primary {
+  background-color: #03dac6 !important;
+  border-color: #03dac6 !important;
+  color: #111 !important;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 18px;
+}
+
+.btn-primary:hover {
+  background-color: #00bfa5 !important;
+  border-color: #00bfa5 !important;
+}
+
+#catalog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+#catalog-container .col-md-4 {
+  flex: 0 1 260px;
+  max-width: 260px;
+}
+
+.buy-button,
+.details-btn,
+.btn-submit {
+  background-color: #03dac6 !important;
+  color: #111 !important;
+  border: none !important;
+}

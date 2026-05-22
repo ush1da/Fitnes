@@ -33,11 +33,8 @@
 
     <main class="container">
       <h2 class="text-center mb-4">Залиште заявку</h2>
-
-      <form
-        class="contact-form"
-        onsubmit="alert('Дякуємо за заявку! Ми зателефонуємо вам протягом 15 хвилин.'); return false;"
-      >
+      <!-- фівфівфівфівфівфівфів -->
+      <form class="contact-form" id="contact-form">
         <fieldset>
           <legend>Ваші дані для зв'язку</legend>
 
@@ -79,6 +76,14 @@
               placeholder="+380XXXXXXXXX"
               required
             />
+          </div>
+          <!-- іваіваіваіваіва -->
+          <div class="form-group mb-3">
+            <label for="training-type">Оберіть тренування:</label>
+
+            <select id="training-type" class="form-control">
+              <option>Оберіть тренування</option>
+            </select>
           </div>
 
           <div class="form-group mb-3">
