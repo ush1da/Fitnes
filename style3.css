@@ -1,7 +1,5 @@
 @import url("styles.css");
 
-/* NAVIGATION */
-
 nav ul {
   display: flex !important;
   flex-direction: row !important;
@@ -16,8 +14,6 @@ nav ul li {
   margin: 0 !important;
 }
 
-/* MEDIA */
-
 img {
   max-width: 100% !important;
   height: auto !important;
@@ -28,21 +24,15 @@ video {
   max-width: 100% !important;
 }
 
-/* TITLES */
-
 h1,
 h2 {
   text-align: center !important;
 }
 
-/* CONTAINER */
-
 main.container {
   max-width: 100% !important;
   padding: 0 !important;
 }
-
-/* HERO */
 
 .hero {
   width: 100% !important;
@@ -58,19 +48,13 @@ main.container {
   padding: 0 10% !important;
 }
 
-/* HERO CONTENT */
-
 .hero-content {
   max-width: 600px;
 }
 
-/* PRICING */
-
 .pricing {
   padding: 80px 10% !important;
 }
-
-/* FIX BOOTSTRAP ROW */
 
 .pricing .row {
   display: flex !important;
@@ -78,8 +62,6 @@ main.container {
   justify-content: center !important;
   gap: 30px !important;
 }
-
-/* FIX CARDS */
 
 .pricing .card {
   flex: 1 1 300px !important;
@@ -90,13 +72,9 @@ main.container {
   border: none !important;
 }
 
-/* LOCATION */
-
 .location {
   padding: 80px 10% !important;
 }
-
-/* FIX LOCATION BLOCK */
 
 .location-container {
   display: flex !important;
@@ -104,13 +82,9 @@ main.container {
   align-items: stretch !important;
 }
 
-/* ADDRESS */
-
 .address-info {
   flex: 1 !important;
 }
-
-/* MAP */
 
 .map {
   flex: 1 !important;
@@ -121,8 +95,6 @@ main.container {
   height: 300px !important;
   border-radius: 12px;
 }
-
-/* TABLE */
 
 .table {
   color: #eaeaea !important;
@@ -148,8 +120,6 @@ main.container {
   border-color: #444 !important;
 }
 
-/* FORM */
-
 .form-control {
   background-color: inherit !important;
   color: inherit !important;
@@ -160,14 +130,10 @@ main.container {
   color: #999 !important;
 }
 
-/* BUTTON */
-
 .btn-primary {
   background-color: inherit !important;
   border-color: inherit !important;
 }
-
-/* FOOTER */
 
 footer {
   display: flex !important;
