@@ -1,4 +1,3 @@
-// Дані тренувань
 const fitnessSchedule = [
   {
     id: 1,
@@ -33,10 +32,6 @@ const fitnessSchedule = [
   },
 ];
 
-// ===============================
-// 1. Динамічне наповнення catalog
-// ===============================
-
 const catalogContainer = document.querySelector("#catalog-container");
 
 if (catalogContainer) {
@@ -63,7 +58,6 @@ if (catalogContainer) {
     catalogContainer.append(card);
   });
 
-  // Кнопка детальніше
   const buttons = document.querySelectorAll(".details-btn");
 
   buttons.forEach((button) => {
@@ -72,10 +66,6 @@ if (catalogContainer) {
     });
   });
 }
-
-// ===============================
-// 2. Обробка форми
-// ===============================
 
 const contactForm = document.querySelector("#contact-form");
 
@@ -86,10 +76,6 @@ if (contactForm) {
     alert("Дякуємо за заявку! Ми зв'яжемося з вами.");
   });
 }
-
-// ===============================
-// 3. Set для select
-// ===============================
 
 const trainingSelect = document.querySelector("#training-type");
 
